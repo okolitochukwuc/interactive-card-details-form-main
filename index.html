@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./main.css" />
+
+    <title>Interactive card details form</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="first_box">
+        <div class="card_front card">
+          <div class="card__imag">
+            <img src="./images/card-logo.svg" alt="" class="card__image" />
+          </div>
+          <h4 class="js-img-number">0000 0000 0000 0000</h4>
+          <div class="card_name">
+            <h5 class="js-img-name">Jane Appleseed</h5>
+            <h5>
+              <span class="js-img-month">00</span>/<span class="js-img-year"
+                >00</span
+              >
+            </h5>
+          </div>
+        </div>
+        <div class="card_back card">
+          <p class="js-img-cvc">000</p>
+        </div>
+      </div>
+      <div class="second_box js-second-box">
+        <div class="inner_container js-form">
+          <div class="place_holder">
+            <h5>CARDHOLDER NAME</h5>
+            <input
+              type="text"
+              class="js-card-name"
+              placeholder="e.g. Jane Appleseed"
+            />
+            <p class="active js-card-name-active"></p>
+          </div>
+          <div class="place_holder">
+            <h5>CARD NUMBER</h5>
+            <input
+              type="text"
+              class="js-card-number"
+              placeholder="e.g. 1234 5678 9123 0000"
+            />
+            <p class="active js-card-number-active"></p>
+          </div>
+          <div class="place_holder month">
+            <div class="flex_input">
+              <h5>Exp. Date (MM/YY)</h5>
+              <div class="input_holder">
+                <input
+                  type="number"
+                  class="js-card-month"
+                  placeholder="MM"
+                  min="1"
+                  max="12"
+                />
+                <input type="number" class="js-class-year" placeholder="YY" />
+              </div>
+              <p class="active js-card-date-active"></p>
+            </div>
+            <div class="flex_input">
+              <h5>CVC</h5>
+              <div class="input_holder_2">
+                <input
+                  type="number"
+                  class="js-card-cvc"
+                  placeholder="e.g. 123"
+                />
+              </div>
+              <p class="active js-card-cvc-active"></p>
+            </div>
+          </div>
+          <button class="js-btn">Confirm</button>
+        </div>
+        <div class="inner_container-2 js-complete hide">
+          <img src="./images/icon-complete.svg" alt="" />
+          <h3>THANK YOU!</h3>
+          <p>We've added your card details</p>
+          <button class="btn-continue js-btn-continue">Continue</button>
+        </div>
+      </div>
+    </div>
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>
